@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+
+.container {
+    text-align: center;
+    color: #313335;
+    margin-top: 20px;
+}
+
+h1, h2, h3, #timer {
+    font-weight: 300;
+}
+
+button {
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+button i {
+    margin-right: 3px;
+}
+
+#timer {
+    font-size: 64px;
+}

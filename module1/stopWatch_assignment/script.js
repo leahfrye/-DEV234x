@@ -8,14 +8,18 @@ var recordings = [];
 // Starts interval that adds time
 function addTime() {
     interval = setInterval(function() {
-        time[2] ++;
-        if (time[2] == 9) {
-            time[2] = 0;
-            time[1] ++;
+        if (time[2] < 9) {
+            time[2] ++;        
         }
-        if (time[1] === 9) {
-            time[1] = 0;
-            time[0] ++;
+        else if (time[2] === 9) {
+            time[2] = 0;
+            if (time[1] < 9) {
+                time[1] ++;
+            }
+            else if (time[1] === 9) {
+                time[1] = 0;
+                time[0] ++;
+            }
         }
         updateDOM();
     }, 10);
@@ -24,7 +28,6 @@ function addTime() {
 // Updates time in the DOM
 function updateDOM() {
     document.getElementById("timer").innerHTML = time[0] + "." + time[1] + "" + time[2];
-    document.getElementById("recordings").innerHTML = "";
 }
 
 // Stops the interval
@@ -41,6 +44,7 @@ function reset() {
     time = [0, 0 ,0];
     recordings = [];
     updateDOM();
+    document.getElementById("recordings").innerHTML = "";
 }
 
 // Adds current time to list of recorded times

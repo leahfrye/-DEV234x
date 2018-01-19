@@ -6,7 +6,6 @@ body {
 .container {
     margin-top: 40px;
     text-align: center;
-    color: #FA7163;
 }
 
 input {
@@ -20,10 +19,12 @@ h1 {
     font-family: 'VT323', monospace;
     font-size: 66px;
     margin-bottom: 30px;
+    color: #FA7163;
 }
 
 button {
     background-color: #D96B60;
+    border-radius: 0px !important;
 }
 
 h3 {
@@ -31,24 +32,389 @@ h3 {
     font-weight: 300;
     font-size: 22px;
     color: white;
+    background-color: #000000;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.select-container {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+select {
+    margin-bottom: 30px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
 }
 
 #output {
-    padding-top: 30px;
-    max-width: 500px;
     margin: 0 auto;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    font-weight: 200;
+    display: none;
 }
 
-.title {
-    font-weight: 400;
+table {
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 500px !important;
+    font-weight: 300 !important;
+    box-shadow: 3px 3px 0px #FA7163;
 }
 
-img {
-    margin-bottom: 20px;
-    max-width: 300px;
-    border-radius: 5px;
+table th {
+    font-family: 'VT323', monospace;
+    font-size: 18px;
 }
+
+table th, table td {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+/* Loading animation from: https://codepen.io/fbrz/pen/QwYLGV */
+
+#loader {
+    animation: spin 1s linear infinite;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -5px;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px #fff, 
+        20px -20px #fff, 
+        30px -10px #fff, 
+        30px 0px #fff, 
+        30px 10px #fff, 
+        20px 20px #fff, 
+        10px 30px #fff, 
+        0px 30px transparent, 
+        -10px 30px transparent, 
+        -20px 20px transparent, 
+        -30px 10px transparent, 
+        -30px 0px transparent, 
+        -30px -10px transparent, 
+        -20px -20px transparent,
+        -10px -30px transparent;
+    }
+    6.25% {
+      box-shadow: 
+        0px -30px transparent, 
+        10px -30px #fff, 
+        20px -20px #fff, 
+        30px -10px #fff, 
+        30px 0px #fff, 
+        30px 10px #fff, 
+        20px 20px #fff, 
+        10px 30px #fff, 
+        0px 30px #fff, 
+        -10px 30px transparent, 
+        -20px 20px transparent, 
+        -30px 10px transparent, 
+        -30px 0px transparent, 
+        -30px -10px transparent, 
+        -20px -20px transparent,
+        -10px -30px transparent;
+    }
+    12.5% {
+      box-shadow: 
+        0px -30px transparent, 
+        10px -30px transparent, 
+        20px -20px #fff, 
+        30px -10px #fff, 
+        30px 0px #fff, 
+        30px 10px #fff, 
+        20px 20px #fff, 
+        10px 30px #fff, 
+        0px 30px #fff, 
+        -10px 30px #fff, 
+        -20px 20px transparent, 
+        -30px 10px transparent, 
+        -30px 0px transparent, 
+        -30px -10px transparent, 
+        -20px -20px transparent,
+        -10px -30px transparent;
+    }
+    18.75% {
+      box-shadow: 
+        0px -30px transparent, 
+        10px -30px transparent, 
+        20px -20px transparent, 
+        30px -10px #fff, 
+        30px 0px #fff, 
+        30px 10px #fff, 
+        20px 20px #fff, 
+        10px 30px #fff, 
+        0px 30px #fff, 
+        -10px 30px #fff, 
+        -20px 20px #fff, 
+        -30px 10px transparent, 
+        -30px 0px transparent, 
+        -30px -10px transparent, 
+        -20px -20px transparent,
+        -10px -30px transparent;
+    }
+    25% {
+      box-shadow: 
+        0px -30px transparent, 
+        10px -30px transparent, 
+        20px -20px transparent, 
+        30px -10px transparent, 
+        30px 0px #fff, 
+        30px 10px #fff, 
+        20px 20px #fff, 
+        10px 30px #fff, 
+        0px 30px #fff, 
+        -10px 30px #fff, 
+        -20px 20px #fff, 
+        -30px 10px #fff, 
+        -30px 0px transparent, 
+        -30px -10px transparent, 
+        -20px -20px transparent,
+        -10px -30px transparent;
+    }
+    31.25% {
+      box-shadow: 
+        0px -30px transparent, 
+        10px -30px transparent, 
+        20px -20px transparent, 
+        30px -10px transparent, 
+        30px 0px transparent, 
+        30px 10px #fff, 
+        20px 20px #fff, 
+        10px 30px #fff, 
+        0px 30px #fff, 
+        -10px 30px #fff, 
+        -20px 20px #fff, 
+        -30px 10px #fff, 
+        -30px 0px #fff, 
+        -30px -10px transparent, 
+        -20px -20px transparent,
+        -10px -30px transparent;
+    }
+    37.5% {
+      box-shadow: 
+        0px -30px transparent, 
+        10px -30px transparent, 
+        20px -20px transparent, 
+        30px -10px transparent, 
+        30px 0px transparent, 
+        30px 10px transparent, 
+        20px 20px #fff, 
+        10px 30px #fff, 
+        0px 30px #fff, 
+        -10px 30px #fff, 
+        -20px 20px #fff, 
+        -30px 10px #fff, 
+        -30px 0px #fff, 
+        -30px -10px #fff, 
+        -20px -20px transparent,
+        -10px -30px transparent;
+    }
+    43.75% {
+      box-shadow: 
+        0px -30px transparent, 
+        10px -30px transparent, 
+        20px -20px transparent, 
+        30px -10px transparent, 
+        30px 0px transparent, 
+        30px 10px transparent, 
+        20px 20px transparent, 
+        10px 30px #fff, 
+        0px 30px #fff, 
+        -10px 30px #fff, 
+        -20px 20px #fff, 
+        -30px 10px #fff, 
+        -30px 0px #fff, 
+        -30px -10px #fff, 
+        -20px -20px #fff,
+        -10px -30px transparent;
+    }
+    50% {
+      box-shadow: 
+        0px -30px transparent, 
+        10px -30px transparent, 
+        20px -20px transparent, 
+        30px -10px transparent, 
+        30px 0px transparent, 
+        30px 10px transparent, 
+        20px 20px transparent, 
+        10px 30px transparent, 
+        0px 30px #fff, 
+        -10px 30px #fff, 
+        -20px 20px #fff, 
+        -30px 10px #fff, 
+        -30px 0px #fff, 
+        -30px -10px #fff, 
+        -20px -20px #fff,
+        -10px -30px #fff;
+    }
+    56.25% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px transparent, 
+        20px -20px transparent, 
+        30px -10px transparent, 
+        30px 0px transparent, 
+        30px 10px transparent, 
+        20px 20px transparent, 
+        10px 30px transparent, 
+        0px 30px transparent, 
+        -10px 30px #fff, 
+        -20px 20px #fff, 
+        -30px 10px #fff, 
+        -30px 0px #fff, 
+        -30px -10px #fff, 
+        -20px -20px #fff,
+        -10px -30px #fff;
+    }
+    62.5% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px #fff, 
+        20px -20px transparent, 
+        30px -10px transparent, 
+        30px 0px transparent, 
+        30px 10px transparent, 
+        20px 20px transparent, 
+        10px 30px transparent, 
+        0px 30px transparent, 
+        -10px 30px transparent, 
+        -20px 20px #fff, 
+        -30px 10px #fff, 
+        -30px 0px #fff, 
+        -30px -10px #fff, 
+        -20px -20px #fff,
+        -10px -30px #fff;
+    }
+    68.75% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px #fff, 
+        20px -20px #fff, 
+        30px -10px transparent, 
+        30px 0px transparent, 
+        30px 10px transparent, 
+        20px 20px transparent, 
+        10px 30px transparent, 
+        0px 30px transparent, 
+        -10px 30px transparent, 
+        -20px 20px transparent, 
+        -30px 10px #fff, 
+        -30px 0px #fff, 
+        -30px -10px #fff, 
+        -20px -20px #fff,
+        -10px -30px #fff;
+    }
+    75% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px #fff, 
+        20px -20px #fff, 
+        30px -10px #fff, 
+        30px 0px transparent, 
+        30px 10px transparent, 
+        20px 20px transparent, 
+        10px 30px transparent, 
+        0px 30px transparent, 
+        -10px 30px transparent, 
+        -20px 20px transparent, 
+        -30px 10px transparent, 
+        -30px 0px #fff, 
+        -30px -10px #fff, 
+        -20px -20px #fff,
+        -10px -30px #fff;
+    }
+    81.25% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px #fff, 
+        20px -20px #fff, 
+        30px -10px #fff, 
+        30px 0px #fff, 
+        30px 10px transparent, 
+        20px 20px transparent, 
+        10px 30px transparent, 
+        0px 30px transparent, 
+        -10px 30px transparent, 
+        -20px 20px transparent, 
+        -30px 10px transparent, 
+        -30px 0px transparent, 
+        -30px -10px #fff, 
+        -20px -20px #fff,
+        -10px -30px #fff;
+    }
+    87.5% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px #fff, 
+        20px -20px #fff, 
+        30px -10px #fff, 
+        30px 0px #fff, 
+        30px 10px #fff, 
+        20px 20px transparent, 
+        10px 30px transparent, 
+        0px 30px transparent, 
+        -10px 30px transparent, 
+        -20px 20px transparent, 
+        -30px 10px transparent, 
+        -30px 0px transparent, 
+        -30px -10px transparent, 
+        -20px -20px #fff,
+        -10px -30px #fff;
+    }
+    93.75% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px #fff, 
+        20px -20px #fff, 
+        30px -10px #fff, 
+        30px 0px #fff, 
+        30px 10px #fff, 
+        20px 20px #fff, 
+        10px 30px transparent, 
+        0px 30px transparent, 
+        -10px 30px transparent, 
+        -20px 20px transparent, 
+        -30px 10px transparent, 
+        -30px 0px transparent, 
+        -30px -10px transparent, 
+        -20px -20px transparent,
+        -10px -30px #fff;
+    }
+    100% {
+      box-shadow: 
+        0px -30px #fff, 
+        10px -30px #fff, 
+        20px -20px #fff, 
+        30px -10px #fff, 
+        30px 0px #fff, 
+        30px 10px #fff, 
+        20px 20px #fff, 
+        10px 30px #fff, 
+        0px 30px transparent, 
+        -10px 30px transparent, 
+        -20px 20px transparent, 
+        -30px 10px transparent, 
+        -30px 0px transparent, 
+        -30px -10px transparent, 
+        -20px -20px transparent,
+        -10px -30px transparent;
+    }
+  }
+  

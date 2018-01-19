@@ -12,25 +12,74 @@
     <body>
         <div class="container">
             <h1>Star Wars API Demo</h1>
-            <div>
                 <h3>Select two starships from the dropdown lists to compare.</h3>
-                <select>
-                    <option value="2">CR90 Corvette</option>
-                    <option value="75">V-wing</option>
-                    <option value="74">Belbullab-22 Starfighter</option>
-                    <option value="65">Jedi Interceptor</option>
-                    <option value="3">Star Destroyer</option>
-                    <option value="59">Trade Fedaration Cruiser</option>
-                    <option value="58">Solar Sailer</option>
-                    <option value="63">Republic Attack Cruiser</option>
-                    <option value="28">A-wing</option>
-                    <option value="29">B-wing</option>
-                    <option value="39">Naboo Fighter</option>
-                    <option value="10">Millenium Falcon</option>
-                </select>
 
-            </div>
+                <div class="select-container">
+                    <select id="input1" class="left">
+                        <option value="2">CR90 Corvette</option>
+                        <option value="75">V-wing</option>
+                        <option value="74">Belbullab-22 Starfighter</option>
+                        <option value="65">Jedi Interceptor</option>
+                        <option value="3">Star Destroyer</option>
+                        <option value="59">Trade Fedaration Cruiser</option>
+                        <option value="58">Solar Sailer</option>
+                        <option value="63">Republic Attack Cruiser</option>
+                        <option value="28">A-wing</option>
+                        <option value="29">B-wing</option>
+                        <option value="39">Naboo Fighter</option>
+                        <option value="10">Millenium Falcon</option>
+                    </select>
+                    <select id="input2" class="right">
+                        <option value="2">CR90 Corvette</option>
+                        <option value="75">V-wing</option>
+                        <option value="74">Belbullab-22 Starfighter</option>
+                        <option value="65">Jedi Interceptor</option>
+                        <option value="3">Star Destroyer</option>
+                        <option value="59">Trade Fedaration Cruiser</option>
+                        <option value="58">Solar Sailer</option>
+                        <option value="63">Republic Attack Cruiser</option>
+                        <option value="28">A-wing</option>
+                        <option value="29">B-wing</option>
+                        <option value="39">Naboo Fighter</option>
+                        <option value="10">Millenium Falcon</option>
+                    </select>
+                </div>
+                
                 <button id="compareButton" class="btn btn-default">Compare</button>
+                <div id="loader"></div>
+                <div id="output">
+                    <table class="table table-striped table-light">
+                        <thead id="names">
+                            <tr>
+                                <th></th>
+                                <th id="name1"></th>
+                                <th id="name2"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="stats">
+                            <tr>
+                                <th>Cost</th>
+                                <td id="cost1"></td>
+                                <td id="cost2"></td>
+                            </tr>
+                            <tr>
+                                <th>Speed</th>
+                                <td id="speed1"></td>
+                                <td id="speed2"></td>
+                            </tr>
+                            <tr>
+                                <th>Cargo Size</th>
+                                <td id="size1"></td>
+                                <td id="size2"></td>
+                            </tr>
+                            <tr>
+                                <th>Passengers</th>
+                                <td id="pass1"></td>
+                                <td id="pass2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Loading gif here -->

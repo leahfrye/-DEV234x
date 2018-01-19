@@ -1,0 +1,54 @@
+body {
+    background-image: url("stars.gif");
+    background-repeat: repeat;
+}
+
+.container {
+    margin-top: 40px;
+    text-align: center;
+    color: #FA7163;
+}
+
+input {
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 66px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #D96B60;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: white;
+}
+
+#output {
+    padding-top: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.title {
+    font-weight: 400;
+}
+
+img {
+    margin-bottom: 20px;
+    max-width: 300px;
+    border-radius: 5px;
+}
